@@ -5,6 +5,7 @@ import cors from 'cors';
 import dalleRoutes from './routes/dalle.routes.js';
 
 dotenv.config();
+const port = process.env.PORT || 3008; // default port to 3008 if not specified in dotenv
 
 const app = express();
 app.use(cors());
@@ -16,4 +17,4 @@ app.get('/', (req, res) => {
     res.status(200).send('Hello from Dall.E!');
 });
 
-app.listen(8080, () => console.log('Server is running on port 8080!'));
+app.listen(port, () => console.log(`Server is running on port ${port}!`));
