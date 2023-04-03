@@ -10,3 +10,9 @@ const state = proxy({
 });
 
 export default state;
+// into = are we on the homepage?
+// color = the color of the logo #EFBD48
+// isLogoTexture = are we currently displaying the image on the shirt?
+// isFullTexture = display the pattern on the shirt
+// logoDecal = image
+// fullDecal = pattern
