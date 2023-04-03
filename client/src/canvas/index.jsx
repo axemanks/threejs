@@ -4,7 +4,7 @@ import { Environment, Center } from '@react-three/drei';
 import Shirt from './Shirt';
 import Backdrop from './Backdrop';
 import CameraRig from './CameraRig';
-import Shrit from './Shirt';
+
 
 const CanvasModel  = () => {
   return (
@@ -14,7 +14,8 @@ const CanvasModel  = () => {
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in">
       <ambientLight intensity={0.5} />
-      <Environment preset="city" />
+      <Environment files="../src/assets/golf1k.hdr" />
+      
       <CameraRig>
         <Backdrop />
         <Center>
@@ -26,3 +27,5 @@ const CanvasModel  = () => {
 }
 
 export default CanvasModel
+
+// background options[sunset, dawn,night, warehouse, forest, apartment, studio, city, park, lobby]
