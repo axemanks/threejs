@@ -1,12 +1,15 @@
 import { Canvas } from '@react-three/fiber';
-import { Environment, Center } from '@react-three/drei';
+import { Environment, Center, useTexture } from '@react-three/drei';
 
 import Shirt from './Shirt';
 import Backdrop from './Backdrop';
 import CameraRig from './CameraRig';
-import Shrit from './Shirt';
 
-const CanvasModel  = () => {
+
+
+
+const CanvasModel = () => {
+  
   return (
     <Canvas
       shadows
@@ -14,7 +17,7 @@ const CanvasModel  = () => {
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in">
       <ambientLight intensity={0.5} />
-      <Environment preset="city" />
+      <Environment files='/public/environmentMap.hdr' /> 
       <CameraRig>
         <Backdrop />
         <Center>
