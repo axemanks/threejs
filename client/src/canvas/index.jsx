@@ -14,7 +14,7 @@ const CanvasModel  = () => {
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in">
       <ambientLight intensity={0.5} />
-      <Environment files="../src/assets/golf1k.hdr" />
+      {/* // <Environment files="../src/assets/golf1k.hdr" /> */}
       
       <CameraRig>
         <Backdrop />
